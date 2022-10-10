@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.FluentValidation
 {
-    public class CustomerValidator : AbstractValidator<Customer>
+    public class Customervalidator: AbstractValidator<Customer>
     {
-        public CustomerValidator()
+        public Customervalidator()  
         {
             RuleFor(x => x.City).NotEmpty().WithMessage("Şehir Bilgisi Boş geçilemez");
             RuleFor(x => x.Name).NotEmpty().WithMessage("İsim boş bırakılamaz");

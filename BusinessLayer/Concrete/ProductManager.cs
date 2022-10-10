@@ -28,17 +28,17 @@ namespace BusinessLayer.Concrete
             return _iproductdal.GetList();
         }
 
-        public void Tdelete(Product t)
+        public void delete(Product t)
         {
             _iproductdal.Delete(t);
         }
 
-        public void Tinsert(Product t)
+        public void insert(Product t)
         {
             _iproductdal.Insert(t);
         }
 
-        public void Tupdate(Product t)
+        public void update(Product t)
         {
             _iproductdal.Update(t);
         }

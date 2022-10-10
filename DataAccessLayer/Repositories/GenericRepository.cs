@@ -10,10 +10,10 @@ namespace DataAccessLayer.Repositories
 {
     public class GenericRepository<T> : iGenericDal<T> where T : class
     {
-        
+
         public void Delete(T t)
         {
-            using var c=new context();
+            using var c = new context();
             c.Remove(t);
             c.SaveChanges();
         }

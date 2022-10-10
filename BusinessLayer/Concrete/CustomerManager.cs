@@ -11,30 +11,38 @@ namespace BusinessLayer.Concrete
 {
     public class CustomerManager : iCustomerService
     {
-        iCustomerDal _icustomerdal;
+        iCustomerDal _customerdal;
+
+        public CustomerManager(iCustomerDal customerdal)
+        {
+            _customerdal = customerdal;
+        }
+
         public Customer getbyid(int id)
         {
-           return _icustomerdal.getbyid(id);
+           return _customerdal.getbyid(id);
         }
 
         public List<Customer> GetList()
         {
-            return _icustomerdal.GetList();
+            return _customerdal.GetList();
         }
 
-        public void Tdelete(Customer t)
+        public void delete(Customer t)
         {
-            _icustomerdal.Delete(t);
+            _customerdal.Delete(t);
         }
 
-        public void Tinsert(Customer t)
+        public void insert(Customer t)
         {
-            _icustomerdal.Insert(t);
+            _customerdal.Insert(t);
         }
 
-        public void Tupdate(Customer t)
+        public void update(Customer t)
         {
-            _icustomerdal.Update(t);
+            _customerdal.Update(t);
         }
+
+      
     }
 }
