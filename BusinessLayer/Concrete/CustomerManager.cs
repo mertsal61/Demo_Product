@@ -43,6 +43,9 @@ namespace BusinessLayer.Concrete
             _customerdal.Update(t);
         }
 
-      
+        public List<Customer> GetCustomerListwithjob()
+        {
+            return _customerdal.GetListwithjob();
+        }
     }
 }

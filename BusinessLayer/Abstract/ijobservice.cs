@@ -5,10 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer.Abstract
+namespace BusinessLayer.Abstract
 {
-    public interface iCustomerDal:iGenericDal<Customer>
+    public interface ijobservice:iGenericService<Job>
     {
-        List<Customer> GetListwithjob();
     }
 }
