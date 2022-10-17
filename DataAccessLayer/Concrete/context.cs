@@ -1,4 +1,5 @@
 ﻿using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Concrete
 {
-    public class context:DbContext
+    public class context : IdentityDbContext<AppUser, AppRole, int>
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -17,9 +18,9 @@ namespace DataAccessLayer.Concrete
 
         }
 
-        public DbSet<Product>products { get; set; }
-        public DbSet<Customer>customers { get; set; }
-        public DbSet<Category>categories { get; set; }
-        public DbSet<Job>jobs { get; set; }
+        public DbSet<Product> products { get; set; }
+        public DbSet<Customer> customers { get; set; }
+        public DbSet<Category> categories { get; set; }
+        public DbSet<Job> jobs { get; set; }
     }
 }
